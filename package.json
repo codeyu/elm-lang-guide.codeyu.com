@@ -1,0 +1,33 @@
+{
+    "name": "elm-lang-guide.codeyu.com",
+    "version": "1.0.0",
+    "description": "Chinese version of guide.elm-lang.org",
+    "main": "index.js",
+    "dependencies": {
+      "gitbook-cli": "^2.3.2",
+      "gitbook-plugin-bulk-redirect": "^0.2.1",
+      "gitbook-plugin-ga": "^1.0.1",
+      "gitbook-plugin-meta": "^0.1.12",
+      "gitbook-plugin-sitemap": "^1.2.0",
+      "gitbook-plugin-youtube": "^1.1.0",
+      "pretranslate": "file:tool/pretranslate",
+      "rimraf": "^2.6.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "install": "gitbook install",
+      "start": "gitbook serve",
+      "build": "rimraf _book && rimraf docs && gitbook build && mv _book docs && rimraf docs/**/*.md && sed -i 's/搜索和输入/搜索/g' docs/*.html docs/**/*.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/codeyu/elm-lang-guide.codeyu.com.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/codeyu/elm-lang-guide.codeyu.com/issues"
+    },
+    "homepage": "https://github.com/codeyu/elm-lang-guide.codeyu.com#readme"
+  }
